@@ -48,12 +48,16 @@ body{
   font-weight: bold;
 }
 
-.navbar .menu li .active{
-  border-bottom: 4px solid #f63e4e;
-}
-
 .navbar .menu li a:hover {
   border-bottom:  4px solid #f63e4e;
+}
+
+/* Categorias */
+
+.cactus, .flores{
+  font-size: 24px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 /* Products */
@@ -71,7 +75,7 @@ body{
   border-radius: 5px;
   padding: 5px;
   margin-bottom: 20px;
-
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0);
 }
 
 .products .card img{
@@ -123,6 +127,11 @@ body{
 .products{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+
+.products .card:hover{
+  transform: translateY(-10px);
 }
 
 @media (max-width: 820px){

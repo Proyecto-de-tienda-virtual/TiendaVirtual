@@ -4,7 +4,7 @@
         "nombre": "Artículo 1",
         "descripcion": "Descripción del artículo 1",
         "precio": 9983,
-        "estado": true,
+        "categoria": "cactus",
         "imagen": "../imagenes/planta1.jpg"
     },
     {
@@ -12,7 +12,7 @@
         "nombre": "Artículo 2",
         "descripcion": "Descripción del artículo2",
         "precio": 9919,
-        "estado": true,
+        "categoria": "cactus",
         "imagen": "../imagenes/planta1.jpg"
     },
     {
@@ -20,7 +20,7 @@
         "nombre": "Artículo 3",
         "descripcion": "Descripción del artículo3",
         "precio": 35442,
-        "estado": true,
+        "categoria": "cactus",
         "imagen": "../imagenes/planta1.jpg"
     },
     {
@@ -28,7 +28,7 @@
         "nombre": "Artículo 4",
         "descripcion": "Descripción del artículo4",
         "precio": 9983,
-        "estado": true,
+        "categoria": "cactus",
         "imagen": "../imagenes/planta1.jpg"
     },
     {
@@ -36,7 +36,7 @@
         "nombre": "Artículo 5",
         "descripcion": "Descripción del artículo5",
         "precio": 9919,
-        "estado": true,
+        "categoria": "cactus",
         "imagen": "../imagenes/planta1.jpg"
     },
     {
@@ -44,7 +44,7 @@
         "nombre": "Artículo 6",
         "descripcion": "Descripción del artículo6",
         "precio": 35442,
-        "estado": true,
+        "categoria": "cactus",
         "imagen": "../imagenes/planta1.jpg"
     },
     {
@@ -52,7 +52,7 @@
         "nombre": "Artículo 7",
         "descripcion": "Descripción del artículo7",
         "precio": 9919,
-        "estado": true,
+        "categoria": "cactus",
         "imagen": "../imagenes/planta1.jpg"
     },
     {
@@ -60,7 +60,71 @@
         "nombre": "Artículo 8",
         "descripcion": "Descripción del artículo8",
         "precio": 35442,
-        "estado": true,
+        "categoria": "cactus",
+        "imagen": "../imagenes/planta1.jpg"
+    },
+    {
+        "id": 1,
+        "nombre": "Artículo 9",
+        "descripcion": "Descripción del artículo 1",
+        "precio": 9983,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Artículo 10",
+        "descripcion": "Descripción del artículo2",
+        "precio": 9919,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Artículo 11",
+        "descripcion": "Descripción del artículo3",
+        "precio": 35442,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Artículo 12",
+        "descripcion": "Descripción del artículo4",
+        "precio": 9983,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Artículo 13",
+        "descripcion": "Descripción del artículo5",
+        "precio": 9919,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg"
+    },
+    {
+        "id":6,
+        "nombre": "Artículo 14",
+        "descripcion": "Descripción del artículo6",
+        "precio": 35442,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Artículo 15",
+        "descripcion": "Descripción del artículo7",
+        "precio": 9919,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Artículo 16",
+        "descripcion": "Descripción del artículo8",
+        "precio": 35442,
+        "categoria": "flores",
         "imagen": "../imagenes/planta1.jpg"
     }
 ]
