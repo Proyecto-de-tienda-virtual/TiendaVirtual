@@ -1,66 +1,146 @@
 [
     {
-        "id": 1,
+        "id": "1",
         "nombre": "Artículo 1",
         "descripcion": "Descripción del artículo 1",
         "precio": 9983,
-        "estado": true,
-        "imagen": "../imagenes/planta1.jpg"
+        "categoria": "cactus",
+        "imagen": "../SVG/barras-escalonadas.svg",
+        "descuento": "15%"
     },
     {
-        "id": 2,
+        "id": "2",
         "nombre": "Artículo 2",
         "descripcion": "Descripción del artículo2",
         "precio": 9919,
-        "estado": true,
-        "imagen": "../imagenes/planta1.jpg"
+        "categoria": "cactus",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "15%"
     },
     {
-        "id": 3,
+        "id": "3",
         "nombre": "Artículo 3",
         "descripcion": "Descripción del artículo3",
         "precio": 35442,
-        "estado": true,
-        "imagen": "../imagenes/planta1.jpg"
+        "categoria": "cactus",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "15%"
     },
     {
-        "id": 4,
+        "id": "4",
         "nombre": "Artículo 4",
         "descripcion": "Descripción del artículo4",
         "precio": 9983,
-        "estado": true,
-        "imagen": "../imagenes/planta1.jpg"
+        "categoria": "cactus",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "15%"
     },
     {
-        "id": 5,
+        "id": "5",
         "nombre": "Artículo 5",
         "descripcion": "Descripción del artículo5",
-        "precio": 9919,
-        "estado": true,
-        "imagen": "../imagenes/planta1.jpg"
+        "precio": 10000,
+        "categoria": "cactus",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "25%"
     },
     {
-        "id":6,
+        "id":"6",
         "nombre": "Artículo 6",
         "descripcion": "Descripción del artículo6",
         "precio": 35442,
-        "estado": true,
-        "imagen": "../imagenes/planta1.jpg"
+        "categoria": "cactus",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "15%"
     },
     {
-        "id": 7,
+        "id": "7",
         "nombre": "Artículo 7",
         "descripcion": "Descripción del artículo7",
         "precio": 9919,
-        "estado": true,
-        "imagen": "../imagenes/planta1.jpg"
+        "categoria": "cactus",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "15%"
     },
     {
-        "id": 8,
+        "id": "8",
         "nombre": "Artículo 8",
         "descripcion": "Descripción del artículo8",
         "precio": 35442,
-        "estado": true,
-        "imagen": "../imagenes/planta1.jpg"
+        "categoria": "cactus",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "15%"
+    },
+    {
+        "id": "9",
+        "nombre": "Artículo 9",
+        "descripcion": "Descripción del artículo 1",
+        "precio": 9983,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "15%"
+    },
+    {
+        "id": "10",
+        "nombre": "Artículo 10",
+        "descripcion": "Descripción del artículo2",
+        "precio": 9919,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "45%"
+    },
+    {
+        "id": "11",
+        "nombre": "Artículo 11",
+        "descripcion": "Descripción del artículo3",
+        "precio": 35442,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "45%"
+    },
+    {
+        "id": "12",
+        "nombre": "Artículo 12",
+        "descripcion": "Descripción del artículo4",
+        "precio": 9983,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "15%"
+    },
+    {
+        "id":"13",
+        "nombre": "Artículo 13",
+        "descripcion": "Descripción del artículo5",
+        "precio": 9919,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "15%"
+    },
+    {
+        "id":"14",
+        "nombre": "Artículo 14",
+        "descripcion": "Descripción del artículo6",
+        "precio": 35442,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "15%"
+    },
+    {
+        "id": "15",
+        "nombre": "Artículo 15",
+        "descripcion": "Descripción del artículo7",
+        "precio": 9919,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "15%"
+    },
+    {
+        "id": "16",
+        "nombre": "Artículo 16",
+        "descripcion": "Descripción del artículo8",
+        "precio": 35442,
+        "categoria": "flores",
+        "imagen": "../imagenes/planta1.jpg",
+        "descuento": "15%"
     }
 ]

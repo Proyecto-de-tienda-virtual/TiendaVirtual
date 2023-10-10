@@ -4,44 +4,65 @@ $(document).ready(function () {
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var data = JSON.parse(xhr.responseText);
-            var cards = document.querySelectorAll(".card");
-            var loadedImagesCount = 0;
+            var categoriesSelect = document.getElementById('categories-dropdown');
+            var nameFilterInput = document.getElementById('name-filter');
 
-            function loadAsyncImage(imageUrl, imgElement, callback) {
-                var img = new Image();
-                img.onload = function () {
-                    imgElement.src = imageUrl;
-                    callback();
-                };
-                img.src = imageUrl;
-            }
+            updateResults(data);
 
-            function loadAll() {
-                for (var i = 0; i < cards.length; i++) {
-                    var imagen = data[i].imagen;
-                    var imgElement = cards[i].querySelector(".img img");
-                    loadAsyncImage(imagen, imgElement, function () {
-                        loadedImagesCount++;
-                        if (loadedImagesCount === cards.length) {
-                        }
-                    });
+            categoriesSelect.addEventListener('change', function() {
+                updateResults(data);
+            });
 
-                    var descripcion = data[i].descripcion;
-                    var descElement = cards[i].querySelector(".desc");
-                    descElement.innerText = descripcion;
-
-                    var precio = data[i].precio
-                    var precioElement = cards[i].querySelector(".price");
-                    precioElement.innerText = "₡" + precio;
-
-                    var nombre = data[i].nombre
-                    var nombreElement = cards[i].querySelector(".title");
-                    nombreElement.innerText = nombre;
-                }
-            }
-
-            loadAll();
+            nameFilterInput.addEventListener('input', function() {
+                updateResults(data);
+            });
         }
     };
     xhr.send();
 });
+
+function updateResults(data) {
+    var resultsSection = document.getElementById('products');
+    resultsSection.innerHTML = '';
+
+    var selectedCategory = document.getElementById('categories-dropdown').value;
+    var nameFilter = document.getElementById('name-filter').value.toLowerCase();
+
+    if (selectedCategory === 'all' && nameFilter === '') {
+        data.forEach(function(item) {
+            renderCard(item, resultsSection);
+        });
+    } else {
+        data.forEach(function(item) {
+            if ((selectedCategory === 'all' || item.categoria === selectedCategory) &&
+                (nameFilter === '' || item.nombre.toLowerCase().includes(nameFilter))) {
+                renderCard(item, resultsSection);
+            }
+        });
+    }
+}
+
+function renderCard(item, container) {
+    var card = document.createElement('div');
+    card.classList.add('card');
+    
+    // Estructura HTML de la tarjeta con más datos
+        card.innerHTML = `
+        <img src="${item.imagen}" alt="">
+        <div class="title">${item.nombre}</div>
+        <div class="desc">${item.descripcion}</div>
+        <div class="box">
+            <div class="price">$${item.precio}</div>
+            <button class="btn">Comprar</button>
+        </div>
+    `;
+    
+    container.appendChild(card);
+
+    // Añadir un evento de clic a la card
+    card.addEventListener('click', function() {
+        // Redirigir a page3.html con el ID del producto como parámetro
+        window.location.href = 'page3.html?id=' + item.id;
+    });
+}
+
