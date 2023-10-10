@@ -4,16 +4,17 @@ $(document).ready(function () {
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var data = JSON.parse(xhr.responseText);
-            var filterCheckboxes = document.querySelectorAll('.filter-checkbox');
-            // Asignar un evento de escucha a los checkboxes de filtro
+            var categoriesSelect = document.getElementById('categories-dropdown');
+            var nameFilterInput = document.getElementById('name-filter');
+
             updateResults(data);
-            filterCheckboxes.forEach(function(checkbox) {
-                
-                checkbox.addEventListener('change', function() {
-                    
-                    updateResults(data);
-                    
-                });
+
+            categoriesSelect.addEventListener('change', function() {
+                updateResults(data);
+            });
+
+            nameFilterInput.addEventListener('input', function() {
+                updateResults(data);
             });
         }
     };
@@ -21,25 +22,20 @@ $(document).ready(function () {
 });
 
 function updateResults(data) {
-    
     var resultsSection = document.getElementById('products');
-    resultsSection.innerHTML = '';  // Limpiamos la sección de resultados
+    resultsSection.innerHTML = '';
 
-    var selectedCategories = Array.from(document.querySelectorAll('.filter-checkbox:checked'))
-                                .map(function(checkbox) {
-                                    return checkbox.value;
-                                });
+    var selectedCategory = document.getElementById('categories-dropdown').value;
+    var nameFilter = document.getElementById('name-filter').value.toLowerCase();
 
-    if (selectedCategories.length === 0) {
-        // Si no se ha seleccionado ninguna categoría, mostrar todas las tarjetas
+    if (selectedCategory === 'all' && nameFilter === '') {
         data.forEach(function(item) {
-            
             renderCard(item, resultsSection);
         });
     } else {
-        // Mostrar solo las tarjetas de las categorías seleccionadas
         data.forEach(function(item) {
-            if (selectedCategories.includes(item.categoria)) {
+            if ((selectedCategory === 'all' || item.categoria === selectedCategory) &&
+                (nameFilter === '' || item.nombre.toLowerCase().includes(nameFilter))) {
                 renderCard(item, resultsSection);
             }
         });
@@ -50,9 +46,23 @@ function renderCard(item, container) {
     var card = document.createElement('div');
     card.classList.add('card');
     
-    // Construir el contenido de la tarjeta según tus necesidades
-    // Aquí solo se muestra el nombre
-    card.innerHTML = '<div class="title">' + item.nombre + '</div>';
+    // Estructura HTML de la tarjeta con más datos
+        card.innerHTML = `
+        <img src="${item.imagen}" alt="">
+        <div class="title">${item.nombre}</div>
+        <div class="desc">${item.descripcion}</div>
+        <div class="box">
+            <div class="price">$${item.precio}</div>
+            <button class="btn">Comprar</button>
+        </div>
+    `;
     
     container.appendChild(card);
+
+    // Añadir un evento de clic a la card
+    card.addEventListener('click', function() {
+        // Redirigir a page3.html con el ID del producto como parámetro
+        window.location.href = 'page3.html?id=' + item.id;
+    });
 }
+

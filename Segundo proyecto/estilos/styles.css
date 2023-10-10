@@ -1,7 +1,8 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -30,7 +31,7 @@ body{
 
 .navbar .logo h1{
   color: #424144;
-  border-bottom: 4px solid #f63e4e;
+  border-bottom: 6px solid #075c1e;
 }
 
 .navbar .menu li {
@@ -44,25 +45,50 @@ body{
   color: #424144;
   border-bottom: 4px solid transparent;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 .navbar .menu li a:hover {
-  border-bottom:  4px solid #f63e4e;
+  border-bottom:  4px solid #075c1e;
 }
 
-/* Categorias */
-
-.cactus, .flores{
-  font-size: 24px;
-  text-align: center;
-  margin-top: 30px;
+/* Estilo para el contenedor de los filtros */
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
+/* Estilos para el input de búsqueda */
+#name-filter {
+  padding: 10px;
+  font-size: 20px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para el select de categorías */
+#categories-dropdown {
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para las opciones del select */
+#categories-dropdown option {
+  padding: 10px;
+  font-size: 20px;
+}
+
 
 /* Products */
 
-.section {
+.sect_produts {
   padding: 10px 5%;
   
 }
@@ -103,32 +129,30 @@ body{
 }
 
 .products .card .box .price{
-  color: #f63e4e;
+  color: #088178;
   font-size: 20px;
   font-weight: bold;
 }
 
 .products .card .box .btn{
   font-size: 13px;
-  color: #f63e4e;
+  color: #088178;
   padding: 10px 18px;
   font-weight: 900;
-  border: 1px solid #f63e4e;
+  border: 1px solid #088178;
   border-radius: 20px;
 }
 
 .products .card .box .btn:hover{
   cursor: pointer;
-  background-color: #f63e4e;
+  background-color: #088178;
   color: white;
 }
-
 
 .products{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
-
 
 .products .card:hover{
   transform: translateY(-10px);
@@ -169,4 +193,140 @@ body{
     margin: 10px 0;
     font-size: 25px;
   }
+}
+
+/*  CARRUCEL DE IMAGENES   */
+
+.title_slider {
+  text-align: center;
+  margin-top: 60px;
+  
+}
+
+.slider-box{
+  width: 70vh;
+  height: auto;
+  margin: 30px auto 0;
+  overflow: hidden;
+}
+
+.slider-box ul{
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-box li{
+  
+  width: 100%;
+  list-style: none;
+  position: relative; 
+  display: inline-block;
+
+}
+
+.detalles {
+  position: absolute; 
+  bottom: 5px;
+  left: 0; 
+  width: 100%; 
+  background-color: #000000;
+  opacity: .7; 
+  color: white; 
+  padding: 10px; 
+  font-size: 20px;
+  text-align: center;
+}
+
+.slider-box img{
+  display: block; 
+  height: 70vh;
+  width: 100%;
+}
+
+@keyframes slide {
+  0%{
+    margin-left: 0;
+  }
+  20%{
+    margin-left: 0;
+  }
+  25%{
+    margin-left: -100%;
+  }
+  45%{
+    margin-left: -100%;
+  }
+  50%{
+    margin-left: -200%;
+  }
+  70%{
+    margin-left: -200%;
+  }
+  75%{
+    margin-left: -300%;
+  }
+  100%{
+    margin-left: -300%;
+  }
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* normal boton */
+button.normal{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 17px 30px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+/* product details */
+#prodetails{
+  display: flex;
+  margin: 20px 20px;
+}
+
+#prodetails .single-pro-details{
+  width: 50%;
+}
+
+#prodetails .single-pro-details h4{
+  padding: 20px 0;
+}
+
+#prodetails .single-pro-details select{
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+
+#prodetails .single-pro-details button{
+  background-color: #088178;
+  color: #fff;
+}
+
+#prodetails .single-pro-details span{
+  line-height: 25px;
+}
+
+#prodetails .single-pro-image {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 40%;
+  margin-right: 20px;
+}
+
+#prodetails .single-pro-image img {
+  align-self: flex-end;
 }

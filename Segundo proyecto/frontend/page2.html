@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../estilos/styles.css">
-  <title>Apartado de Productos</title>
+  <title>Productos</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="../backend/script.js"></script> 
 </head>
 <body>
   <nav class="navbar">
-    <div class="logo"><h1>Shop</h1></div>
+    <div class="logo"><h1>LeafTEC</h1></div>
     <ul class="menu">
-      <li> <a href="../frontend/page1.html">Home</a></li>
-      <li> <a href="">Products</a></li>
+      <li> <a href="../frontend/page1.html">Inicio</a></li>
+      <li> <a href="">Productos</a></li>
       <li> <a href=""><i class="fas fa-shopping-cart"></i></a></li>
     </ul>
 
@@ -23,17 +23,16 @@
     </div>
   </nav>
 
-  <div class="filters">
-    <label>
-      <input type="checkbox" class="filter-checkbox" value="cactus"> Cactus
-    </label>
-    <label>
-      <input type="checkbox" class="filter-checkbox" value="flores"> Flores
-    </label>
-    <!-- Agrega más categorías según sea necesario -->
+  <div class="filter-container">
+    <input type="text" id="name-filter" placeholder="Buscar por nombre">
+    <select id="categories-dropdown">
+      <option value="all">Todas</option>
+      <option value="cactus">Cactus</option>
+      <option value="flores">Flores</option>
+    </select>
   </div>
 
-  <section class="content2" id="results-section">
+  <section class="sect_produts">
     <div class="products" id="products">
       
     </div>
