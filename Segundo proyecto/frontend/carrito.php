@@ -16,7 +16,6 @@ if (isset($_GET['clear_carrito'])) {
     unset($_SESSION['carrito']);
     $_SESSION['carrito'] = [];
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,8 +81,10 @@ if (isset($_GET['clear_carrito'])) {
     <script
         src="https://www.paypal.com/sdk/js?client-id=AeInM7LFLMfpzcb4Z0P-oE1qiHzRViBlqynUZ0m8MtzIbuexAGE8eDgXVzA7IXJuD71f-2BNG7_hh5ZU&currency=USD"></script>
     <script>
-        var costoCompra = 100;
+        var costoCompra = 0;
         var porcentajePuntos = 5;
+
+        costoCompra = <?php echo $total; ?>;
 
         paypal.Buttons({
             style: {
