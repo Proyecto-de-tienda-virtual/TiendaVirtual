@@ -5,7 +5,7 @@
         "descripcion": "El cactus de Opuntia, también conocido como nopal, es un cactus plano y de forma ovalada que se encuentra en regiones desérticas. Sus cladodios, o 'hojas', son planos y espinosos, y a menudo se utilizan en la cocina debido a su pulpa jugosa y comestible. Las flores de Opuntia son grandes y de colores brillantes, variando desde el amarillo hasta el rojo intenso. Estas flores se transforman en frutos llamados tunas o higos chumbos, que son dulces y se utilizan para hacer mermeladas y postres.",
         "precio": 9000,
         "familia": "Cactaceae",
-        "imagen": "../images/planta1.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=11-CPi_c2imSAAIAotegr2W8wQRRDWvGc",
         "descuento": "15%"
     },
     {
@@ -14,7 +14,7 @@
         "descripcion": "El saguaro es un cactus icónico de los desiertos de América del Norte. Es conocido por sus altos tallos que a menudo alcanzan alturas impresionantes. Sus ramificaciones crean una silueta distintiva en el paisaje desértico. El saguaro produce flores blancas y cerosas en la parte superior de sus brazos durante la primavera y el verano, que se transforman en frutos rojos cuando maduran. Estos cactus son vitales para la fauna del desierto, proporcionando refugio y alimento a diversas especies.",
         "precio": 9000,
         "familia": "Cactaceae",
-        "imagen": "../images/planta2.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1VCzDD1pIh-GQ__cW2ZrDVfRQmxwJGN4c",
         "descuento": "15%"
     },
     {
@@ -23,7 +23,7 @@
         "descripcion": "El cactus de barril es un cactus cilíndrico y robusto que se encuentra en regiones desérticas de América. Sus tallos están adornados con espinas grandes y afiladas. Durante la primavera, produce flores grandes y vistosas que varían en color, desde el amarillo brillante hasta el rojo intenso. Estas flores se desarrollan en la parte superior del cactus y a menudo atraen a polinizadores como las abejas. El cactus de barril también produce frutos carnosos y comestibles que son apreciados por la vida silvestre y los seres humanos por igual.",
         "precio": 9000,
         "familia": "Cactaceae",
-        "imagen": "../images/planta3.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1NNszUyvMkKG9saG6M6aQ6lQBSGXMuPrT",
         "descuento": "15%"
     },
     {
@@ -32,7 +32,7 @@
         "descripcion": "El ferocactus es un cactus cilíndrico y grande que se encuentra en zonas áridas y semiáridas de América. Sus espinas afiladas y su aspecto imponente le han dado su nombre. Este cactus produce flores espectaculares de color amarillo o rojo en la parte superior de su tallo durante la primavera y el verano. A medida que envejecen, estos cactus pueden desarrollar formas intrincadas y fascinantes. Son una vista común en los paisajes desérticos y son esenciales para el ecosistema del desierto.",
         "precio": 9000,
         "familia": "Cactaceae",
-        "imagen": "../images/planta4.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1urFNEzNd_LxYyxoOZHjbuY9vgBTEn88N",
         "descuento": "15%"
     },
     {
@@ -41,7 +41,7 @@
         "descripcion": "La cholla es un cactus ramificado con segmentos y espinas afiladas que se encuentran en los desiertos de América del Norte. Sus flores son de colores vibrantes y se desarrollan en los extremos de los segmentos. Durante la floración, la cholla se convierte en un espectáculo de color en el desierto. Aunque hermosa, esta planta debe manejarse con cuidado debido a sus espinas penetrantes. Es un componente vital del ecosistema desértico y proporciona alimento y refugio a varias criaturas del desierto.",
         "precio": 10000,
         "familia": "Cactaceae",
-        "imagen": "../images/planta5.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1ud-26RgujFDF3Qg57sci0VxZtKAXf30D",
         "descuento": "15%"
     },
     {
@@ -50,7 +50,7 @@
         "descripcion": "La mammillaria es un cactus pequeño y globoso que se encuentra en diferentes hábitats, desde desiertos hasta bosques. Sus tallos están cubiertos de pequeñas protuberancias llamadas tubérculos, que contienen espinas cortas y suaves. Durante la primavera, produce flores pequeñas y encantadoras en la parte superior de sus tallos. Estas flores pueden ser de varios colores, desde el blanco hasta el rosa y el amarillo. La mammillaria es popular entre los coleccionistas de cactus debido a su forma compacta y floración colorida.",
         "precio": 10000,
         "familia": "Cactaceae",
-        "imagen": "../images/planta6.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1lCZw908KP0MPHMu67E3svgudIFBORGtZ",
         "descuento": "15%"
     },
     {
@@ -59,7 +59,7 @@
         "descripcion": "El peyote es un cactus pequeño y esférico que se encuentra en el desierto de Chihuahua en México y partes de Texas. Contiene alcaloides psicoactivos, y ha sido utilizado en rituales indígenas durante siglos. Tiene una apariencia distintiva con su forma redondeada y espinas cortas. Durante la temporada de lluvias, produce flores blancas o amarillas en la parte superior. Es una planta sagrada para las culturas indígenas y está protegida en muchas regiones debido a su estado vulnerable.",
         "precio": 10000,
         "familia": "Cactaceae",
-        "imagen": "../images/planta7.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1k1m3rjNv4WdHl1acbcIdm3u3cCuwUBJ_",
         "descuento": "15%"
     },
     {
@@ -68,7 +68,7 @@
         "descripcion": "El cactus de San Pedro es un cactus columnar alto que se encuentra en los Andes de América del Sur. Tiene tallos verdes con numerosas costillas y espinas. Produce grandes flores blancas en los lados de los tallos durante la noche. Este cactus ha sido utilizado en ceremonias chamánicas por culturas indígenas debido a sus propiedades alucinógenas. Es considerado una planta sagrada y es un símbolo espiritual en muchas tradiciones.",
         "precio": 20000,
         "familia": "Cactaceae",
-        "imagen": "../images/planta8.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1CBdAChVdSRs6T2UVCI5kiZU8ekjDU_ij",
         "descuento": "15%"
     },
     {
@@ -77,7 +77,7 @@
         "descripcion": "El manzano es un árbol frutal venerado por sus jugosas y variadas manzanas. Estos frutos vienen en una gama de colores y sabores, desde las dulces Golden Delicious hasta las acidas Granny Smith. Durante la primavera, el manzano se viste de flores blancas o rosadas, creando un espectáculo natural encantador. Además de su valor gastronómico, los manzanos también simbolizan la sabiduría y la fertilidad en diversas culturas.",
         "precio": 15000,
         "familia": "Rosaceae",
-        "imagen": "../images/planta9.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1RW8tWhmn5cEW1TEfcNABs6oZ5cg8PJed",
         "descuento": "15%"
     },
     {
@@ -86,7 +86,7 @@
         "descripcion": "El cerezo es un árbol frutal conocido por su belleza y sus deliciosas cerezas. Durante la primavera, sus ramas se llenan de flores blancas o rosadas, transformando el paisaje en un mar de tonos suaves. Las cerezas, tanto dulces como ácidas, son apreciadas en repostería, mermeladas y como frutas frescas. El cerezo también es un símbolo de esperanza y renovación en muchas culturas.",
         "precio": 15000,
         "familia": "Rosaceae",
-        "imagen": "../images/planta10.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1bzstSqWgrhx1lOI3oiNmI0kIE_uLct2x",
         "descuento": "15%"
     },
     {
@@ -95,7 +95,7 @@
         "descripcion": "El frambueso es un arbusto vigoroso que produce frambuesas, pequeños tesoros rojos y jugosos. Estas bayas, con su sabor agridulce, son apreciadas por su versatilidad en la cocina. Se utilizan en postres, mermeladas y también son una fuente rica de antioxidantes y fibra. En primavera, el frambueso se adorna con flores blancas o rosadas, anticipando la llegada de su deliciosa cosecha.",
         "precio": 15000,
         "familia": "Rosaceae",
-        "imagen": "../images/planta11.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=17E4S29rNutTXL4uyR4v30lzVtwPff7Mx",
         "descuento": "15%"
     },
     {
@@ -104,7 +104,7 @@
         "descripcion": "El almendro es un árbol elegante cuyas semillas, las almendras, son tesouros culinarios llenos de sabor y nutrientes. Con sus hojas lanceoladas y flores blancas o rosadas que florecen en primavera, el almendro es un símbolo de esperanza y renovación en muchas culturas. Las almendras se consumen en su forma cruda, tostada o se utilizan para hacer aceite y productos de confitería, añadiendo un toque de indulgencia y salud a la dieta.",
         "precio": 25000,
         "familia": "Rosaceae",
-        "imagen": "../images/planta12.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=14IjnWFBiUnYZwcNWJSqIdLErbkgpAk2r",
         "descuento": "15%"
     },
     {
@@ -113,7 +113,7 @@
         "descripcion": "El espino amarillo es un arbusto resistente que da frutos anaranjados, las bayas de espino amarillo. Estas bayas, llenas de vitamina C y antioxidantes, tienen un sabor agridulce y son utilizadas en jugos, mermeladas y productos de belleza. Además de su valor nutricional, el espino amarillo es conocido por su capacidad para crecer en suelos difíciles y su resistencia a condiciones adversas, lo que lo convierte en una planta apreciada en la jardinería y la agricultura.",
         "precio": 15000,
         "familia": "Rosaceae",
-        "imagen": "../images/planta13.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1v-kyf0wVRZj7JtkZF-oOtMWJw0tXlo2V",
         "descuento": "15%"
     },
     {
@@ -122,7 +122,7 @@
         "descripcion": "El ciruelo es un árbol frutal que produce ciruelas, frutas jugosas y dulces en una variedad de colores, desde el púrpura intenso hasta el amarillo dorado. Estas frutas versátiles son ideales para comer frescas, hacer mermeladas, pasteles y licores. Con sus flores blancas que aparecen en primavera, el ciruelo añade encanto al paisaje y es un testimonio de la generosidad de la naturaleza.",
         "precio": 10000,
         "familia": "Rosaceae",
-        "imagen": "../images/planta14.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1QFexoXLUOyXlXM1T8pbAwlAV0ow2qK8g",
         "descuento": "15%"
     },
     {
@@ -131,7 +131,7 @@
         "descripcion": " La endrina es un arbusto espinoso que produce pequeñas drupas de color azul oscuro conocidas como endrinas. Estas drupas se utilizan para hacer licores como el gin de endrinas. La planta tiene un valor histórico y medicinal, y ha sido utilizada en la fabricación de bebidas y en la medicina tradicional. Con sus espinas y flores blancas o rosadas, la endrina aporta un toque rústico y encantador al paisaje.",
         "precio": 15000,
         "familia": "Rosaceae",
-        "imagen": "../images/planta15.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1Zscv_1qee5J65UmZKdyux3bkDPsD6eYN",
         "descuento": "15%"
     },
     {
@@ -140,7 +140,7 @@
         "descripcion": "Las orquídeas Brassia, también conocidas como orquídeas araña, son famosas por sus flores que tienen sépalos largos y delgados que se asemejan a patas de araña. Estas orquídeas vienen en tonos de amarillo, verde y marrón, con patrones intrincados. Son plantas epífitas y requieren condiciones de humedad moderada para prosperar. Las Brassia son apreciadas por su aspecto exótico y son populares entre los aficionados a las orquídeas.",
         "precio": 31000,
         "familia": "Orchidaceae",
-        "imagen": "../images/planta16.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1TWAnMHkUPil8vPDQUAIyIIwWIKrM3cR1",
         "descuento": "15%"
     },
     {
@@ -149,7 +149,7 @@
         "descripcion": "Las orquídeas Lady Slipper son conocidas por sus flores inusuales que tienen un labio inflado, parecido a una zapatilla. Vienen en una variedad de colores, desde el blanco hasta el rosa y el púrpura. Estas orquídeas son terrestres y se encuentran en diferentes hábitats, desde bosques hasta praderas. Son valoradas por su singularidad y a menudo son elogiadas en colecciones de orquídeas.",
         "precio": 28000,
         "familia": "Orchidaceae",
-        "imagen": "../images/planta17.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1ojh4VQOO6nul6bFoQp8TmazBFrA8bhCE",
         "descuento": "15%"
     },
     {
@@ -158,7 +158,7 @@
         "descripcion": "Las orquídeas Vanda son conocidas por sus flores grandes y brillantes que vienen en una variedad de colores, incluyendo el azul, morado, rosa y amarillo. Tienen raíces aéreas y requieren una buena circulación de aire para crecer saludablemente. Las Vanda son orquídeas epífitas y a menudo se cultivan en cestas colgantes. Son apreciadas por su apariencia exótica y colores vivos.",
         "precio": 23000,
         "familia": "Orchidaceae",
-        "imagen": "../images/planta18.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1GktWDJVRQMoIxUV1I1Qi57wFI4HAGoJh",
         "descuento": "15%"
     },
     {
@@ -167,7 +167,7 @@
         "descripcion": "Las orquídeas Miltonia, también conocidas como orquídeas pansy, son conocidas por sus flores grandes y redondas con colores y patrones llamativos. Tienen un aroma delicado y a menudo se cultivan por sus características ornamentales. Las Miltonia prefieren condiciones de humedad moderada y luz indirecta. Son apreciadas por su belleza y a menudo se utilizan en arreglos florales y decoración de interiores.",
         "precio": 29000,
         "familia": "Orchidaceae",
-        "imagen": "../images/planta19.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1luavIpvavchtSBMoXPDep2pvXAmUew_s",
         "descuento": "15%"
     },
     {
@@ -176,7 +176,7 @@
         "descripcion": "La orquídea Cymbidium es conocida por sus largas hojas y elegantes racimos de flores. Sus flores pueden ser de varios colores, desde blanco y amarillo hasta tonos más oscuros como el rosa y el morado. Son populares en arreglos florales y se valoran por su forma y durabilidad. Las Cymbidium requieren cuidados específicos y son apreciadas por su apariencia exótica.",
         "precio": 35000,
         "familia": "Orchidaceae",
-        "imagen": "../images/planta20.jpg",
+        "imagen": "https://drive.google.com/uc?export=view&id=1ECUnzngFWA1ffRLQDKFrDn6sBuBaoPnI",
         "descuento": "15%"
     }
 ]
