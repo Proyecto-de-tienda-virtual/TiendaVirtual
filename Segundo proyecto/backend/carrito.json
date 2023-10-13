@@ -1,4 +1,23 @@
 {
     "puntos": 0,
-    "productos": []
+    "productos": [
+        {
+            "id": "2",
+            "nombre": "Art\u00edculo 2",
+            "descripcion": "Descripci\u00f3n del art\u00edculo2",
+            "precio": 9919,
+            "categoria": "cactus",
+            "imagen": "..\/imagenes\/planta1.jpg",
+            "descuento": "15%"
+        },
+        {
+            "id": "1",
+            "nombre": "Art\u00edculo 1",
+            "descripcion": "Descripci\u00f3n del art\u00edculo 1",
+            "precio": 9983,
+            "categoria": "cactus",
+            "imagen": "..\/SVG\/barras-escalonadas.svg",
+            "descuento": "15%"
+        }
+    ]
 }

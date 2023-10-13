@@ -1,4 +1,3 @@
-
 // Cargar carrito desde carrito.json
 fetch("../backend/carrito.json")
   .then((response) => response.json())
@@ -6,19 +5,82 @@ fetch("../backend/carrito.json")
     const carritoList = document.getElementById("carrito-list");
     let total = 0;
 
-    carrito.productos.forEach((producto) => {
+    carrito.productos.forEach((producto, index) => {
       // Agregar producto al carrito
       const listItem = document.createElement("li");
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "Eliminar";
+      deleteButton.setAttribute("data-index", index); // Agregar un atributo para identificar el elemento
+
       listItem.textContent = `${producto.nombre} - $${producto.precio}`;
+      listItem.appendChild(deleteButton);
       carritoList.appendChild(listItem);
 
       // Calcular el total
       total += producto.precio;
+
+      //Mostrar el total
+      document.getElementById("total").textContent = total.toFixed(2);
+
+      // Configurar el manejador de eventos para el botón de eliminación
+      deleteButton.addEventListener("click", function (event) {
+        const indexToDelete = parseInt(event.target.getAttribute("data-index"));
+        // Lógica para eliminar el elemento del carrito según el índice
+        carrito.productos.splice(indexToDelete, 1);
+
+        updateCarritoOnServer(carrito);
+
+        updateCarrito(); // Actualizar la vista del carrito
+      });
     });
 
-    // Mostrar el total
-    document.getElementById("total").textContent = total.toFixed(2);
+    function updateCarritoOnServer(newCarrito) {
+      fetch("../backend/carrito.json", {
+        method: "POST", // Puedes usar POST u otro método adecuado
+        body: JSON.stringify(newCarrito),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Carrito actualizado en el servidor:", data);
+        })
+        .catch((error) => {
+          console.error("Error al actualizar el carrito en el servidor:", error);
+        });
+    }
 
+    function updateCarrito() {
+      // Limpiar la lista
+      carritoList.innerHTML = "";
+
+      // Recalcular el total
+      total = 0;
+      carrito.productos.forEach((producto, index) => {
+        const listItem = document.createElement("li");
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Eliminar";
+        deleteButton.setAttribute("data-index", index);
+
+        listItem.textContent = `${producto.nombre} - $${producto.precio}`;
+        listItem.appendChild(deleteButton);
+        carritoList.appendChild(listItem);
+
+        // Recalcular el total
+        total += producto.precio;
+
+        // Configurar el manejador de eventos para el botón de eliminación
+        deleteButton.addEventListener("click", function (event) {
+          const indexToDelete = parseInt(event.target.getAttribute("data-index"));
+          carrito.productos.splice(indexToDelete, 1);
+          updateCarrito();
+        });
+      });
+
+      // Actualizar el total
+      document.getElementById("total").textContent = total.toFixed(2);
+    }
     // Configurar botón de PayPal
     var costoCompra = total;
     var porcentajePuntos = 5;
@@ -43,10 +105,10 @@ fetch("../backend/carrito.json")
         onApprove: function (data, actions) {
           actions.order.capture().then(function (detalles) {
             var puntos_de_compra = (costoCompra * porcentajePuntos) / 100;
-            //console.log("Detalles de la compra:", detalles);
-            //console.log("total: ", costoCompra)
+            console.log("Detalles de la compra:", detalles);
+            console.log("total: ", costoCompra)
             console.log("Puntos ganados:", puntos_de_compra);
-            window.location.href = "";
+            alert("Pago realizado")
           });
         },
 
