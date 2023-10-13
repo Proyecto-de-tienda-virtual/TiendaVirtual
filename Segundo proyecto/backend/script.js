@@ -4,12 +4,12 @@ $(document).ready(function () {
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var data = JSON.parse(xhr.responseText);
-            var categoriesSelect = document.getElementById('categories-dropdown');
+            var familiesSelect = document.getElementById('families-dropdown');
             var nameFilterInput = document.getElementById('name-filter');
 
             updateResults(data);
 
-            categoriesSelect.addEventListener('change', function() {
+            familiesSelect.addEventListener('change', function() {
                 updateResults(data);
             });
 
@@ -25,16 +25,16 @@ function updateResults(data) {
     var resultsSection = document.getElementById('products');
     resultsSection.innerHTML = '';
 
-    var selectedCategory = document.getElementById('categories-dropdown').value;
+    var selectedFamily = document.getElementById('families-dropdown').value;
     var nameFilter = document.getElementById('name-filter').value.toLowerCase();
 
-    if (selectedCategory === 'all' && nameFilter === '') {
+    if (selectedFamily === 'all' && nameFilter === '') {
         data.forEach(function(item) {
             renderCard(item, resultsSection);
         });
     } else {
         data.forEach(function(item) {
-            if ((selectedCategory === 'all' || item.categoria === selectedCategory) &&
+            if ((selectedFamily === 'all' || item.familia === selectedFamily) &&
                 (nameFilter === '' || item.nombre.toLowerCase().includes(nameFilter))) {
                 renderCard(item, resultsSection);
             }
@@ -50,11 +50,12 @@ function renderCard(item, container) {
         card.innerHTML = `
         <img src="${item.imagen}" alt="">
         <div class="title">${item.nombre}</div>
-        <div class="desc">${item.descripcion}</div>
+        <div class="family">Familia: ${item.familia}</div>
         <div class="box">
-            <div class="price">$${item.precio}</div>
+            <div class="price">₡${item.precio}</div>
             <button class="btn">Comprar</button>
         </div>
+    </div>
     `;
     
     container.appendChild(card);
