@@ -21,8 +21,18 @@ function updateImages(products) {
     var nombres = imageContainer.querySelectorAll('.nombre');
     var descuentos = imageContainer.querySelectorAll('.descuentos');
     for (var i = 0; i < lista.length; i++) {
-        slides[i].src = products[lista[i]].imagen;
-        nombres[i].innerHTML = products[lista[i]].nombre;
-        descuentos[i].innerHTML = 'Descuento del ' + products[lista[i]].descuento;
+        (function(index) {
+            slides[i].src = products[lista[index]].imagen;
+            slides[i].addEventListener('click', function() {
+                var productId = products[lista[index]].id;
+    
+                // Redirigir a page3.html con el ID del producto como parámetro
+                window.location.href = 'page3.html?id=' + productId;
+            });
+    
+            nombres[i].innerHTML = products[lista[index]].nombre;
+            descuentos[i].innerHTML = 'Descuento del ' + products[lista[index]].descuento;
+        })(i);
     }
+    
 }
