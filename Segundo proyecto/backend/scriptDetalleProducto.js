@@ -16,7 +16,7 @@ $(document).ready(function () {
             ).textContent = `Planta: ${dato.nombre}`;
             contenedorProducto.querySelector(
                 "h4"
-            ).textContent = `Familia: ${dato.categoria}`;
+            ).textContent = `Familia: ${dato.familia}`;
 
             contenedorProducto.querySelector(
                 "h3"

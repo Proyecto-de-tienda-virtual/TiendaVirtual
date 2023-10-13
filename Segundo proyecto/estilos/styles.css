@@ -71,8 +71,8 @@ body {
   border-radius: 5px;
 }
 
-/* Estilos para el select de categorías */
-#categories-dropdown {
+/* Estilos para el select de familías */
+#families-dropdown {
   padding: 10px;
   font-size: 20px;
   border: 1px solid #ccc;
@@ -80,7 +80,7 @@ body {
 }
 
 /* Estilos para las opciones del select */
-#categories-dropdown option {
+#families-dropdown option {
   padding: 10px;
   font-size: 20px;
 }
@@ -109,7 +109,7 @@ body {
   width: 100%;
 }
 
-.products .card .desc {
+.products .card .family {
   padding: 5px 20px;
   opacity: 0.8;
 }
@@ -125,27 +125,27 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .products .card .box .price {
-  color: #088178;
+  color: crimson;
   font-size: 20px;
   font-weight: bold;
 }
 
 .products .card .box .btn {
   font-size: 13px;
-  color: #088178;
+  color: crimson;
   padding: 10px 18px;
   font-weight: 900;
-  border: 1px solid #088178;
+  border: 1px solid crimson;
   border-radius: 20px;
 }
 
 .products .card .box .btn:hover {
   cursor: pointer;
-  background-color: #088178;
+  background-color: crimson;
   color: white;
 }
 
@@ -283,62 +283,113 @@ body {
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* product details */
-#prodetails {
-  display: flex;
-  margin: 20px 20px;
+/* Estilos para PC */
+@media (min-width: 1024px) {
+  .section-p1 {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .single-pro-image {
+    display: flex;
+    justify-content: right;
+    width: 40%;
+  }
+
+  .single-pro-image img {
+    width: 300px; 
+    height: auto; 
+  }
+
+  .single-pro-details {
+    width: 40%;
+    text-align: left;
+    padding-left: 20px; 
+  }
 }
 
-#prodetails .single-pro-details {
-  width: 50%;
+/* Estilos para tablets y laptops */
+@media (max-width: 1023px) {
+  .section-p1 {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .single-pro-image,
+  .single-pro-details {
+    width: 100%;
+  }
+
+  .single-pro-image {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .single-pro-image img {
+    width: 300px; 
+    height: auto; 
+  }
 }
 
-#prodetails .single-pro-details h4 {
-  padding: 20px 0;
+/* Estilos para dispositivos con pantallas más pequeñas (móviles) */
+@media (max-width: 767px) {
+  .section-p1 {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .single-pro-image,
+  .single-pro-details {
+    width: 100%;
+  }
+
+  .single-pro-image {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .single-pro-image img {
+    width: 300px;
+    height: auto; 
+  }
 }
 
-#prodetails .single-pro-details select {
-  display: block;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-}
-
+/* Estilos para el botón addToCartBtn */
 .addToCartBtn {
-  background-color: #4caf50; /* Color de fondo verde */
-  color: white; /* Color del texto */
-  border: none; /* Borde sin estilo */
-  padding: 10px 20px; /* Espaciado interno */
-  text-align: center; /* Alineación del texto */
-  text-decoration: none; /* Sin decoración de texto */
-  display: inline-block; /* Mostrar como un elemento en línea */
-  font-size: 16px; /* Tamaño del texto */
-  margin: 10px 2px; /* Margen externo */
-  cursor: pointer; /* Cambiar el cursor al pasar el mouse */
-  border-radius: 5px; /* Esquinas redondeadas */
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Transición de color en hover */
 }
 
 .addToCartBtn:hover {
-  background-color: #2e6d31; /* Cambiar color de fondo al pasar el mouse */
+  background-color: #2e6d31;
 }
 
 .addToCartBtn i {
-  margin-right: 5px; /* Espaciado a la derecha del icono */
+  margin-right: 5px;
 }
 
-#prodetails .single-pro-details span {
-  line-height: 25px;
+/* Espacio entre las etiquetas de texto */
+.single-pro-details h2,
+.single-pro-details h4,
+.single-pro-details h3,
+.single-pro-details span {
+  margin-bottom: 10px;
 }
 
-#prodetails .single-pro-image {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 40%;
-  margin-right: 20px;
-}
-
-#prodetails .single-pro-image img {
-  align-self: flex-end;
-}
 
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
 /* Estilos para el carrito de compras */
