@@ -282,20 +282,6 @@ body {
 
 /*----------------------------------------------------------------------------------------------------------------------------------------*/
 
-/* normal boton */
-button.normal {
-  font-size: 14px;
-  font-weight: 600;
-  padding: 17px 30px;
-  color: #000;
-  background-color: #fff;
-  border-radius: 4px;
-  border: none;
-  outline: none;
-  transition: 0.2s;
-  cursor: pointer;
-}
-
 /* product details */
 #prodetails {
   display: flex;
@@ -316,10 +302,26 @@ button.normal {
   margin-bottom: 10px;
 }
 
+.addToCartBtn {
+  background-color: #4caf50; /* Color de fondo verde */
+  color: white; /* Color del texto */
+  border: none; /* Borde sin estilo */
+  padding: 10px 20px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin decoración de texto */
+  display: inline-block; /* Mostrar como un elemento en línea */
+  font-size: 16px; /* Tamaño del texto */
+  margin: 10px 2px; /* Margen externo */
+  cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+  border-radius: 5px; /* Esquinas redondeadas */
+}
 
-#prodetails .single-pro-details button {
-  background-color: #088178;
-  color: #fff;
+.addToCartBtn:hover {
+  background-color: #2e6d31; /* Cambiar color de fondo al pasar el mouse */
+}
+
+.addToCartBtn i {
+  margin-right: 5px; /* Espaciado a la derecha del icono */
 }
 
 #prodetails .single-pro-details span {
