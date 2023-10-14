@@ -37,7 +37,7 @@ fetch("../backend/carrito.json")
     });
 
     function updateCarritoOnServer(newCarrito) {
-      fetch("../backend/carrito.json", {
+      fetch("../backend/updateCarrito.php", { // Asume que hay un archivo updateCarrito.php en el servidor
         method: "POST", // Puedes usar POST u otro método adecuado
         body: JSON.stringify(newCarrito),
         headers: {
