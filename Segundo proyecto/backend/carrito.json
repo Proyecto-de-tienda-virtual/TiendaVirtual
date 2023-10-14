@@ -1,14 +1,4 @@
 {
     "puntos": 100,
-    "productos": [
-        {
-            "id": "4",
-            "nombre": "Cactus de Ferocactus",
-            "descripcion": "El ferocactus es un cactus cil\u00edndrico y grande que se encuentra en zonas \u00e1ridas y semi\u00e1ridas de Am\u00e9rica. Sus espinas afiladas y su aspecto imponente le han dado su nombre. Este cactus produce flores espectaculares de color amarillo o rojo en la parte superior de su tallo durante la primavera y el verano. A medida que envejecen, estos cactus pueden desarrollar formas intrincadas y fascinantes. Son una vista com\u00fan en los paisajes des\u00e9rticos y son esenciales para el ecosistema del desierto.",
-            "precio": 9000,
-            "familia": "Cactaceae",
-            "imagen": "https:\/\/drive.google.com\/uc?export=view&id=1urFNEzNd_LxYyxoOZHjbuY9vgBTEn88N",
-            "descuento": "15%"
-        }
-    ]
+    "productos": []
 }

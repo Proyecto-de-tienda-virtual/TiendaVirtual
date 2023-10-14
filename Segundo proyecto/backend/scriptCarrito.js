@@ -4,6 +4,7 @@ fetch("../backend/carrito.json")
   .then((carrito) => {
     const carritoList = document.getElementById("carrito-list");
     let total = 0;
+    let porcentajePuntos = 5;
 
     carrito.productos.forEach((producto, index) => {
       // Agregar producto al carrito
@@ -12,12 +13,13 @@ fetch("../backend/carrito.json")
       deleteButton.textContent = "Eliminar";
       deleteButton.setAttribute("data-index", index); // Agregar un atributo para identificar el elemento
 
-      listItem.textContent = `${producto.nombre} - $${producto.precio}`;
+      listItem.textContent = `${producto.nombre} - ₡${producto.precio}`;
       listItem.appendChild(deleteButton);
       carritoList.appendChild(listItem);
 
       // Calcular el total
-      total += producto.precio / 530;
+      // 
+      total += producto.precio;
 
       //Mostrar el total
       document.getElementById("total").textContent = total.toFixed(2);
@@ -82,9 +84,6 @@ fetch("../backend/carrito.json")
       document.getElementById("total").textContent = total.toFixed(2);
     }
     // Configurar botón de PayPal
-    var costoCompra = total;
-    var porcentajePuntos = 5;
-
     paypal
       .Buttons({
         style: {
@@ -93,10 +92,12 @@ fetch("../backend/carrito.json")
           label: 'pay',
         },
         createOrder: function (data, actions) {
+          let totalDolar = total * 0.0019;
+
           return actions.order.create({
             purchase_units: [{
               amount: {
-                value: costoCompra
+                value: parseFloat(totalDolar)
               }
             }]
           })
@@ -104,9 +105,9 @@ fetch("../backend/carrito.json")
 
         onApprove: function (data, actions) {
           actions.order.capture().then(function (detalles) {
-            var puntos_de_compra = (costoCompra * porcentajePuntos) / 100;
+            var puntos_de_compra = (totalDolar * porcentajePuntos) / 100;
             console.log("Detalles de la compra:", detalles);
-            console.log("total: ", costoCompra)
+            console.log("total: ", totalDolar)
             console.log("Puntos ganados:", puntos_de_compra);
             alert("Pago realizado")
           });
