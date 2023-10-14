@@ -45,24 +45,33 @@ function updateResults(data) {
 function renderCard(item, container) {
     var card = document.createElement('div');
     card.classList.add('card');
-    
-    // Estructura HTML de la tarjeta con más datos
+    if(item.descuento === "0%"){
         card.innerHTML = `
-        <img src="${item.imagen}" alt="">
-        <div class="title">${item.nombre}</div>
-        <div class="family">Familia: ${item.familia}</div>
-        <div class="box">
-            <div class="price">₡${item.precio}</div>
-            <button class="btn">Comprar</button>
-        </div>
-    </div>
-    `;
+            <img src="${item.imagen}" alt="">
+            <div class="title">${item.nombre}</div>
+            <div class="family">Familia: ${item.familia}</div>
+            <div class="box">
+                <div class="price">₡${item.precio}</div>
+            </div>
+            </div>
+        `;
+    }else{
+            card.innerHTML = `
+                <img src="${item.imagen}" alt="">
+                <div class="title">${item.nombre}</div>
+                <div class="family">Familia: ${item.familia}</div>
+                <div class="box">
+                    <div class="price">₡${item.precio}</div>
+                    <button class="btn">Descuento: ${item.descuento}</button>
+                </div>
+                </div>
+            `;
+    };
+    
     
     container.appendChild(card);
 
-    // Añadir un evento de clic a la card
     card.addEventListener('click', function() {
-        // Redirigir a page3.html con el ID del producto como parámetro
         window.location.href = 'page3.html?id=' + item.id;
     });
 }
