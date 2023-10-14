@@ -17,7 +17,7 @@ fetch("../backend/carrito.json")
       carritoList.appendChild(listItem);
 
       // Calcular el total
-      total += producto.precio;
+      total += producto.precio / 530;
 
       //Mostrar el total
       document.getElementById("total").textContent = total.toFixed(2);
@@ -135,7 +135,6 @@ document.getElementById("vaciar-carrito").addEventListener("click", function (ev
       console.log("Carrito vaciado:", data);
       // Limpia el carrito en el cliente (opcional)
       document.getElementById("carrito-list").innerHTML = "";
-      document.getElementById("total").textContent = "0.00";
     })
     .catch((error) => {
       console.error("Error al vaciar el carrito:", error);
