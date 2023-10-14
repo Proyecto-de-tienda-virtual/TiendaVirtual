@@ -6,7 +6,7 @@
         "precio": 9000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=11-CPi_c2imSAAIAotegr2W8wQRRDWvGc",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id": "2",
@@ -15,7 +15,7 @@
         "precio": 9000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1VCzDD1pIh-GQ__cW2ZrDVfRQmxwJGN4c",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id": "3",
@@ -24,7 +24,7 @@
         "precio": 9000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1NNszUyvMkKG9saG6M6aQ6lQBSGXMuPrT",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id": "4",
@@ -33,7 +33,7 @@
         "precio": 9000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1urFNEzNd_LxYyxoOZHjbuY9vgBTEn88N",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id": "5",
@@ -51,7 +51,7 @@
         "precio": 10000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1lCZw908KP0MPHMu67E3svgudIFBORGtZ",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id": "7",
@@ -60,7 +60,7 @@
         "precio": 10000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1k1m3rjNv4WdHl1acbcIdm3u3cCuwUBJ_",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id": "8",
@@ -69,7 +69,7 @@
         "precio": 20000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1CBdAChVdSRs6T2UVCI5kiZU8ekjDU_ij",
-        "descuento": "15%"
+        "descuento": "10%"
     },
     {
         "id": "9",
@@ -78,7 +78,7 @@
         "precio": 15000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1RW8tWhmn5cEW1TEfcNABs6oZ5cg8PJed",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id": "10",
@@ -87,7 +87,7 @@
         "precio": 15000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1bzstSqWgrhx1lOI3oiNmI0kIE_uLct2x",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id": "11",
@@ -96,7 +96,7 @@
         "precio": 15000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=17E4S29rNutTXL4uyR4v30lzVtwPff7Mx",
-        "descuento": "15%"
+        "descuento": "5%"
     },
     {
         "id": "12",
@@ -105,7 +105,7 @@
         "precio": 25000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=14IjnWFBiUnYZwcNWJSqIdLErbkgpAk2r",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id":"13",
@@ -114,7 +114,7 @@
         "precio": 15000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1v-kyf0wVRZj7JtkZF-oOtMWJw0tXlo2V",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id":"14",
@@ -123,7 +123,7 @@
         "precio": 10000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1QFexoXLUOyXlXM1T8pbAwlAV0ow2qK8g",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id": "15",
@@ -132,7 +132,7 @@
         "precio": 15000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1Zscv_1qee5J65UmZKdyux3bkDPsD6eYN",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id": "16",
@@ -141,7 +141,7 @@
         "precio": 31000,
         "familia": "Orchidaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1TWAnMHkUPil8vPDQUAIyIIwWIKrM3cR1",
-        "descuento": "15%"
+        "descuento": "20%"
     },
     {
         "id": "17",
@@ -150,7 +150,7 @@
         "precio": 28000,
         "familia": "Orchidaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1ojh4VQOO6nul6bFoQp8TmazBFrA8bhCE",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id": "18",
@@ -159,7 +159,7 @@
         "precio": 23000,
         "familia": "Orchidaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1GktWDJVRQMoIxUV1I1Qi57wFI4HAGoJh",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id": "19",
@@ -168,7 +168,7 @@
         "precio": 29000,
         "familia": "Orchidaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1luavIpvavchtSBMoXPDep2pvXAmUew_s",
-        "descuento": "15%"
+        "descuento": "0%"
     },
     {
         "id": "20",
@@ -177,6 +177,6 @@
         "precio": 35000,
         "familia": "Orchidaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1ECUnzngFWA1ffRLQDKFrDn6sBuBaoPnI",
-        "descuento": "15%"
+        "descuento": "0%"
     }
 ]

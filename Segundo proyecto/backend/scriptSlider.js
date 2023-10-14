@@ -25,8 +25,6 @@ function updateImages(products) {
             slides[i].src = products[lista[index]].imagen;
             slides[i].addEventListener('click', function() {
                 var productId = products[lista[index]].id;
-    
-                // Redirigir a page3.html con el ID del producto como parámetro
                 window.location.href = 'page3.html?id=' + productId;
             });
     
