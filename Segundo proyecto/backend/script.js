@@ -19,6 +19,10 @@ $(document).ready(function () {
         }
     };
     xhr.send();
+    $(".menu-btn").click(function(){
+        $(".navbar .menu").toggleClass("active");
+        $(".menu-btn .i").toggleClass("active");
+    });
 });
 
 function updateResults(data) {
@@ -75,4 +79,5 @@ function renderCard(item, container) {
         window.location.href = 'page3.html?id=' + item.id;
     });
 }
+
 
