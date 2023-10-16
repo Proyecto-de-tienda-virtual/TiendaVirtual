@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     xhr.send();
+    $(".menu-btn").click(function(){
+        $(".navbar .menu").toggleClass("active");
+        $(".menu-btn .i").toggleClass("active");
+    });
 });
 
 function updateImages(products) {
