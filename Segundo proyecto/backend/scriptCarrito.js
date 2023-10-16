@@ -1,3 +1,11 @@
+$(document).ready(function () {
+  // Función para mostrar/ocultar el menú al hacer clic en el botón
+  $(".menu-btn").click(function () {
+      $(".navbar .menu").toggleClass("active");
+      $(".menu-btn .i").toggleClass("active");
+  });
+});
+
 // Cargar carrito desde carrito.json
 fetch("../backend/carrito.json")
   .then((response) => response.json())
@@ -70,10 +78,10 @@ fetch("../backend/carrito.json")
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("Carrito actualizado en el servidor:", data);
+          alert("Producto eliminado exitosamente");
         })
         .catch((error) => {
-          console.error("Error al actualizar el carrito en el servidor:", error);
+          alert("Error al eliminar el producto");
         });
     }
 
@@ -83,6 +91,7 @@ fetch("../backend/carrito.json")
 
       // Recalcular el total
       total = 0;
+      totalPuntos = 0;
       carrito.productos.forEach((producto, index) => {
         const listItem = document.createElement("li");
         const deleteButton = document.createElement("button");
@@ -168,10 +177,8 @@ fetch("../backend/carrito.json")
               })
                 .then((response) => response.json())
                 .then((data) => {
-                  console.log("Carrito actualizado en el servidor:", data);
                 })
                 .catch((error) => {
-                  console.error("Error al actualizar el carrito en el servidor:", error);
                 });
 
               console.log("Detalles de la compra:", detalles);
@@ -212,10 +219,10 @@ fetch("../backend/carrito.json")
         })
           .then((response) => response.json())
           .then((data) => {
-            console.log("Carrito actualizado en el servidor:", data);
+            
           })
           .catch((error) => {
-            console.error("Error al actualizar el carrito en el servidor:", error);
+            
           });
 
         // Actualizar la vista del carrito
@@ -227,26 +234,28 @@ fetch("../backend/carrito.json")
         alert("No tienes suficientes puntos para realizar el pago.");
       }
     });
+    document.getElementById("vaciar-carrito").addEventListener("click", function (event) {
+      event.preventDefault();
+      // Realiza una solicitud DELETE para vaciar el carrito.json en el servidor
+      fetch("../backend/deleteCarrito.php", {
+        method: "DELETE",
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          
+          // Maneja la respuesta del servidor si es necesario
+          alert("Carrito vaciado");
+          
+          // Limpia el carrito en el cliente (opcional)
+          document.getElementById("carrito-list").innerHTML = "";
+          location.reload();
+        })
+        .catch((error) => {
+          alert("Error al vaciar el carrito");
+        });
+    });
   })
   .catch((error) => {
-    console.error("Error al cargar el carrito:", error);
+    alert("Error al cargar el carrito.");
   });
-
-document.getElementById("vaciar-carrito").addEventListener("click", function (event) {
-  event.preventDefault();
-  // Realiza una solicitud DELETE para vaciar el carrito.json en el servidor
-  fetch("../backend/deleteCarrito.php", {
-    method: "DELETE",
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      // Maneja la respuesta del servidor si es necesario
-      console.log("Carrito vaciado:", data);
-      // Limpia el carrito en el cliente (opcional)
-      document.getElementById("carrito-list").innerHTML = "";
-    })
-    .catch((error) => {
-      console.error("Error al vaciar el carrito:", error);
-    });
-});
 
