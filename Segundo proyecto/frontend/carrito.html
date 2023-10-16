@@ -1,66 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="../styles/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="../backend/scriptCarrito.js" defer></script>
-    <style>
-      /* Media query for mobile viewport */
-      @media screen and (max-width: 400px) {
-        #paypal-button-container {
-          width: 100%;
-        }
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="../styles/styleCarrito.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="../backend/scriptCarrito.js" defer></script>
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=AeInM7LFLMfpzcb4Z0P-oE1qiHzRViBlqynUZ0m8MtzIbuexAGE8eDgXVzA7IXJuD71f-2BNG7_hh5ZU&currency=USD">
+    </script>
+  <style>
+    /* Media query for mobile viewport */
+    @media screen and (max-width: 400px) {
+      #paypal-button-container {
+        width: 100%;
       }
+    }
 
-      /* Media query for desktop viewport */
-      @media screen and (min-width: 400px) {
-        #paypal-button-container {
-          width: 250px;
-        }
+    /* Media query for desktop viewport */
+    @media screen and (min-width: 400px) {
+      #paypal-button-container {
+        width: 250px;
       }
-    </style>
-  </head>
+    }
+  </style>
+</head>
 
-  <body>
-    <nav class="navbar">
-      <div class="logo">
-        <h1>LeafTEC</h1>
-      </div>
-      <ul class="menu">
-        <li><a href="../frontend/page1.html">Inicio</a></li>
-        <li><a href="../frontend/page2.html">Productos</a></li>
-        <li>
-          <a href="../frontend/carrito.html"
-            ><i class="fas fa-shopping-cart"></i
-          ></a>
-        </li>
-      </ul>
-
-      <div class="menu-btn">
-        <i class="fa fa-bars"></i>
-      </div>
-    </nav>
-
-    <div id="carrito-container">
-      <h1>Carrito de Compras</h1>
-      <h2>Productos en el Carrito</h2>
-      <ul id="carrito-list"></ul>
-      <p>Total: $<span id="total"></span></p>
-      <a href="../frontend/page2.html">Seguir comprando</a>
-      <a href="#" id="vaciar-carrito">Vaciar Carrito</a>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <h1>LeafTEC</h1>
     </div>
+    <ul class="menu">
+      <li><a href="../frontend/page1.html">Inicio</a></li>
+      <li><a href="../frontend/page2.html">Productos</a></li>
+      <li>
+        <a href="../frontend/carrito.html"><i class="fas fa-shopping-cart"></i></a>
+      </li>
+    </ul>
 
+    <div class="menu-btn">
+      <i class="fa fa-bars"></i>
+    </div>
+  </nav>
+
+  <div id="carrito-container">
+    <h2>Productos en el Carrito</h2>
+    <hr />
+    <ul id="carrito-list"></ul>
     <br />
+    <hr />
+    <p>Total Colones: ₡<span id="total"></span></p>
+    <p>Total Puntos: <span id="totalPuntos"></span></p>
+    <p>Mis Puntos: <span id="misPuntos"></span></p>
+    <a href="../frontend/page2.html">Seguir comprando</a>
+    <a href="#" id="vaciar-carrito">Vaciar Carrito</a>
+  </div>
 
-    <div id="paypal-button-container"></div>
-    <script src="https://www.paypal.com/sdk/js?client-id=AeInM7LFLMfpzcb4Z0P-oE1qiHzRViBlqynUZ0m8MtzIbuexAGE8eDgXVzA7IXJuD71f-2BNG7_hh5ZU&currency=USD"></script>
-  </body>
+  <div id="paypal-button-container"></div>
+
+  <!-- Agregar el botón "Pagar con Puntos" antes del formulario -->
+  <button id="pagar-con-puntos">Pagar con Puntos</button>
+
+</body>
+
 </html>
