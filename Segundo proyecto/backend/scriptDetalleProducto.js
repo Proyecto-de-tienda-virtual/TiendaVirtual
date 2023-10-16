@@ -34,7 +34,7 @@ $(document).ready(function () {
                     .then(carrito => {
                         // Agrega el objeto 'dato' a la lista de productos en el carrito
                         carrito.productos.push(dato);
-            
+                        
                         // Realizar una solicitud PUT para actualizar el carrito.json en el servidor
                         fetch('../backend/putCarrito.php', {
                             method: 'PUT',
@@ -46,15 +46,16 @@ $(document).ready(function () {
                         .then(response => response.json())
                         .then(data => {
                             // Manejar la respuesta del servidor si es necesario
-                            console.log('Carrito actualizado:', data);
+                            alert("Añadido al carrito");
                         })
                         .catch(error => {
-                            console.error('Error al actualizar el carrito:', error);
+                            alert("Error al actualizar el carrito");
                         });
                     })
                     .catch(error => {
-                        console.error('Error al obtener el carrito:', error);
+                        alert("Error al obtener el carrito");
                     });
+                    
             });
         }
     };
