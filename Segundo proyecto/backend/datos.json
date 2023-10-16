@@ -6,7 +6,8 @@
         "precio": 9000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=11-CPi_c2imSAAIAotegr2W8wQRRDWvGc",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
         "id": "2",
@@ -15,7 +16,8 @@
         "precio": 9000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1VCzDD1pIh-GQ__cW2ZrDVfRQmxwJGN4c",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
         "id": "3",
@@ -24,7 +26,8 @@
         "precio": 9000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1NNszUyvMkKG9saG6M6aQ6lQBSGXMuPrT",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
         "id": "4",
@@ -33,7 +36,8 @@
         "precio": 9000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1urFNEzNd_LxYyxoOZHjbuY9vgBTEn88N",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
         "id": "5",
@@ -42,16 +46,18 @@
         "precio": 10000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1ud-26RgujFDF3Qg57sci0VxZtKAXf30D",
-        "descuento": "15%"
+        "descuento": "15%",
+        "puntos": 15
     },
     {
-        "id":"6",
+        "id": "6",
         "nombre": "Cactus de Mammillaria",
         "descripcion": "La mammillaria es un cactus pequeño y globoso que se encuentra en diferentes hábitats, desde desiertos hasta bosques. Sus tallos están cubiertos de pequeñas protuberancias llamadas tubérculos, que contienen espinas cortas y suaves. Durante la primavera, produce flores pequeñas y encantadoras en la parte superior de sus tallos. Estas flores pueden ser de varios colores, desde el blanco hasta el rosa y el amarillo. La mammillaria es popular entre los coleccionistas de cactus debido a su forma compacta y floración colorida.",
         "precio": 10000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1lCZw908KP0MPHMu67E3svgudIFBORGtZ",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
         "id": "7",
@@ -60,7 +66,8 @@
         "precio": 10000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1k1m3rjNv4WdHl1acbcIdm3u3cCuwUBJ_",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
         "id": "8",
@@ -69,7 +76,8 @@
         "precio": 20000,
         "familia": "Cactaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1CBdAChVdSRs6T2UVCI5kiZU8ekjDU_ij",
-        "descuento": "10%"
+        "descuento": "10%",
+        "puntos": 15
     },
     {
         "id": "9",
@@ -78,7 +86,8 @@
         "precio": 15000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1RW8tWhmn5cEW1TEfcNABs6oZ5cg8PJed",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
         "id": "10",
@@ -87,7 +96,8 @@
         "precio": 15000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1bzstSqWgrhx1lOI3oiNmI0kIE_uLct2x",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
         "id": "11",
@@ -96,7 +106,8 @@
         "precio": 15000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=17E4S29rNutTXL4uyR4v30lzVtwPff7Mx",
-        "descuento": "5%"
+        "descuento": "5%",
+        "puntos": 15
     },
     {
         "id": "12",
@@ -105,25 +116,28 @@
         "precio": 25000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=14IjnWFBiUnYZwcNWJSqIdLErbkgpAk2r",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
-        "id":"13",
+        "id": "13",
         "nombre": "Espino Amarillo",
         "descripcion": "El espino amarillo es un arbusto resistente que da frutos anaranjados, las bayas de espino amarillo. Estas bayas, llenas de vitamina C y antioxidantes, tienen un sabor agridulce y son utilizadas en jugos, mermeladas y productos de belleza. Además de su valor nutricional, el espino amarillo es conocido por su capacidad para crecer en suelos difíciles y su resistencia a condiciones adversas, lo que lo convierte en una planta apreciada en la jardinería y la agricultura.",
         "precio": 15000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1v-kyf0wVRZj7JtkZF-oOtMWJw0tXlo2V",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
-        "id":"14",
+        "id": "14",
         "nombre": "Ciruelo",
         "descripcion": "El ciruelo es un árbol frutal que produce ciruelas, frutas jugosas y dulces en una variedad de colores, desde el púrpura intenso hasta el amarillo dorado. Estas frutas versátiles son ideales para comer frescas, hacer mermeladas, pasteles y licores. Con sus flores blancas que aparecen en primavera, el ciruelo añade encanto al paisaje y es un testimonio de la generosidad de la naturaleza.",
         "precio": 10000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1QFexoXLUOyXlXM1T8pbAwlAV0ow2qK8g",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
         "id": "15",
@@ -132,7 +146,8 @@
         "precio": 15000,
         "familia": "Rosaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1Zscv_1qee5J65UmZKdyux3bkDPsD6eYN",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
         "id": "16",
@@ -141,7 +156,8 @@
         "precio": 31000,
         "familia": "Orchidaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1TWAnMHkUPil8vPDQUAIyIIwWIKrM3cR1",
-        "descuento": "20%"
+        "descuento": "20%",
+        "puntos": 15
     },
     {
         "id": "17",
@@ -150,7 +166,8 @@
         "precio": 28000,
         "familia": "Orchidaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1ojh4VQOO6nul6bFoQp8TmazBFrA8bhCE",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
         "id": "18",
@@ -159,7 +176,8 @@
         "precio": 23000,
         "familia": "Orchidaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1GktWDJVRQMoIxUV1I1Qi57wFI4HAGoJh",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
         "id": "19",
@@ -168,7 +186,8 @@
         "precio": 29000,
         "familia": "Orchidaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1luavIpvavchtSBMoXPDep2pvXAmUew_s",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     },
     {
         "id": "20",
@@ -177,6 +196,7 @@
         "precio": 35000,
         "familia": "Orchidaceae",
         "imagen": "https://drive.google.com/uc?export=view&id=1ECUnzngFWA1ffRLQDKFrDn6sBuBaoPnI",
-        "descuento": "0%"
+        "descuento": "0%",
+        "puntos": 15
     }
 ]

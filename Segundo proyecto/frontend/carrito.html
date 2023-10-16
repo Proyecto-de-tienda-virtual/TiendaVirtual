@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Carrito de Compras</title>
-  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="stylesheet" href="../styles/styleCarrito.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -48,17 +48,22 @@
   </nav>
 
   <div id="carrito-container">
-    <h1>Carrito de Compras</h1>
     <h2>Productos en el Carrito</h2>
+    <hr />
     <ul id="carrito-list"></ul>
+    <br />
+    <hr />
     <p>Total Colones: ₡<span id="total"></span></p>
+    <p>Total Puntos: <span id="totalPuntos"></span></p>
+    <p>Mis Puntos: <span id="misPuntos"></span></p>
     <a href="../frontend/page2.html">Seguir comprando</a>
     <a href="#" id="vaciar-carrito">Vaciar Carrito</a>
   </div>
 
-  <br />
-
   <div id="paypal-button-container"></div>
+
+  <!-- Agregar el botón "Pagar con Puntos" antes del formulario -->
+  <button id="pagar-con-puntos">Pagar con Puntos</button>
 
 </body>
 

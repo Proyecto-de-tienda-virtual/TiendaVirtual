@@ -4,7 +4,12 @@ fetch("../backend/carrito.json")
   .then((carrito) => {
     const carritoList = document.getElementById("carrito-list");
     let total = 0;
+    let totalDolar = 0;
     let porcentajePuntos = 5;
+    let precioDescuento = 0;
+    let totalPuntos = 0;
+
+    let misPuntos = carrito.puntos;
 
     carrito.productos.forEach((producto, index) => {
       // Agregar producto al carrito
@@ -13,16 +18,35 @@ fetch("../backend/carrito.json")
       deleteButton.textContent = "Eliminar";
       deleteButton.setAttribute("data-index", index); // Agregar un atributo para identificar el elemento
 
-      listItem.textContent = `${producto.nombre} - ₡${producto.precio}`;
+      listItem.textContent = `${producto.nombre} || ₡${producto.precio} || Descuento: ${producto.descuento} || Valor en puntos: ${producto.puntos}    `;
       listItem.appendChild(deleteButton);
       carritoList.appendChild(listItem);
 
       // Calcular el total
-      // 
-      total += producto.precio;
+      switch (producto.descuento) {
+        case "5%":
+          precioDescuento = producto.precio * 0.05;
+          break;
+        case "10%":
+          precioDescuento = producto.precio * 0.10;
+          break;
+        case "15%":
+          precioDescuento = producto.precio * 0.15;
+          break;
+        case "20%":
+          precioDescuento = producto.precio * 0.20;
+          break;
+        default:
+          precioDescuento = 0;
+      }
+
+      total += producto.precio - precioDescuento;
+      totalPuntos += producto.puntos
 
       //Mostrar el total
       document.getElementById("total").textContent = total.toFixed(2);
+      document.getElementById("totalPuntos").textContent = totalPuntos.toFixed(2);
+      document.getElementById("misPuntos").textContent = misPuntos.toFixed(2);
 
       // Configurar el manejador de eventos para el botón de eliminación
       deleteButton.addEventListener("click", function (event) {
@@ -65,12 +89,30 @@ fetch("../backend/carrito.json")
         deleteButton.textContent = "Eliminar";
         deleteButton.setAttribute("data-index", index);
 
-        listItem.textContent = `${producto.nombre} - $${producto.precio}`;
+        listItem.textContent = `${producto.nombre} || ₡${producto.precio} || Descuento: ${producto.descuento} || Valor en puntos: ${producto.puntos}    `;
         listItem.appendChild(deleteButton);
         carritoList.appendChild(listItem);
 
         // Recalcular el total
-        total += producto.precio;
+        switch (producto.descuento) {
+          case "5%":
+            precioDescuento = producto.precio * 0.05;
+            break;
+          case "10%":
+            precioDescuento = producto.precio * 0.10;
+            break;
+          case "15%":
+            precioDescuento = producto.precio * 0.15;
+            break;
+          case "20%":
+            precioDescuento = producto.precio * 0.20;
+            break;
+          default:
+            precioDescuento = 0;
+        }
+
+        total += producto.precio - precioDescuento;
+        totalPuntos += producto.puntos
 
         // Configurar el manejador de eventos para el botón de eliminación
         deleteButton.addEventListener("click", function (event) {
@@ -82,43 +124,109 @@ fetch("../backend/carrito.json")
 
       // Actualizar el total
       document.getElementById("total").textContent = total.toFixed(2);
+      document.getElementById("totalPuntos").textContent = totalPuntos.toFixed(2);
+      document.getElementById("misPuntos").textContent = misPuntos.toFixed(2);
     }
     // Configurar botón de PayPal
-    paypal
-      .Buttons({
-        style: {
-          color: 'blue',
-          shape: 'pill',
-          label: 'pay',
-        },
-        createOrder: function (data, actions) {
-          let totalDolar = total * 0.0019;
+    if (total > 0) {
+      paypal
+        .Buttons({
+          style: {
+            color: 'blue',
+            shape: 'pill',
+            label: 'pay',
+          },
+          createOrder: function (data, actions) {
+            totalDolar = total * 0.0019;
+            return actions.order.create({
+              purchase_units: [{
+                amount: {
+                  value: parseFloat(totalDolar)
+                }
+              }]
+            })
+          },
 
-          return actions.order.create({
-            purchase_units: [{
-              amount: {
-                value: parseFloat(totalDolar)
-              }
-            }]
+          onApprove: function (data, actions) {
+            actions.order.capture().then(function (detalles) {
+              let puntos_de_compra = (totalDolar * porcentajePuntos) / 100;
+              misPuntos += puntos_de_compra;
+
+              // Actualizar los puntos en el carrito
+              carrito.puntos = misPuntos;
+
+              // Convertir el carrito actualizado a JSON
+              const carritoJSON = JSON.stringify(carrito);
+
+              // Realizar una solicitud POST para guardar el carrito actualizado
+              fetch("../backend/updateCarrito.php", {
+                method: "POST",
+                body: carritoJSON,
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              })
+                .then((response) => response.json())
+                .then((data) => {
+                  console.log("Carrito actualizado en el servidor:", data);
+                })
+                .catch((error) => {
+                  console.error("Error al actualizar el carrito en el servidor:", error);
+                });
+
+              console.log("Detalles de la compra:", detalles);
+              console.log("total: ", totalDolar)
+              console.log("Puntos ganados:", puntos_de_compra);
+              console.log("Puntos totales: ", misPuntos);
+              alert("Pago realizado")
+            });
+          },
+
+          onCancel: function (data) {
+            alert("Pago cancelado")
+            console.log(data)
+          }
+        })
+        .render("#paypal-button-container");
+    }
+
+    document.getElementById("pagar-con-puntos").addEventListener("click", function () {
+      // Verificar si tienes suficientes puntos para pagar
+      if (misPuntos >= totalPuntos) {
+        // Realizar el pago con puntos
+        misPuntos -= totalPuntos;
+
+        // Actualizar los puntos en el carrito
+        carrito.puntos = misPuntos;
+
+        // Convertir el carrito actualizado a JSON
+        const carritoJSON = JSON.stringify(carrito);
+
+        // Realizar una solicitud POST para guardar el carrito actualizado
+        fetch("../backend/updateCarrito.php", {
+          method: "POST",
+          body: carritoJSON,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Carrito actualizado en el servidor:", data);
           })
-        },
-
-        onApprove: function (data, actions) {
-          actions.order.capture().then(function (detalles) {
-            var puntos_de_compra = (totalDolar * porcentajePuntos) / 100;
-            console.log("Detalles de la compra:", detalles);
-            console.log("total: ", totalDolar)
-            console.log("Puntos ganados:", puntos_de_compra);
-            alert("Pago realizado")
+          .catch((error) => {
+            console.error("Error al actualizar el carrito en el servidor:", error);
           });
-        },
 
-        onCancel: function (data) {
-          alert("Pago cancelado")
-          console.log(data)
-        }
-      })
-      .render("#paypal-button-container");
+        // Actualizar la vista del carrito
+        updateCarrito();
+
+        // Mostrar un mensaje de confirmación
+        alert("Pago con puntos realizado con éxito.");
+      } else {
+        alert("No tienes suficientes puntos para realizar el pago.");
+      }
+    });
   })
   .catch((error) => {
     console.error("Error al cargar el carrito:", error);
@@ -141,3 +249,4 @@ document.getElementById("vaciar-carrito").addEventListener("click", function (ev
       console.error("Error al vaciar el carrito:", error);
     });
 });
+
